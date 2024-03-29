@@ -13,49 +13,25 @@
 import { RequestFile } from './models';
 
 /**
-* The list of asset attributes and their values.
+* The transfer request attributes inlcudling the user specified ID and status. Returned with [TransferResponseData](#tocs_transferresponsedata).
 */
-export class AssetResponseAttributes {
+export class TransferResponseAttributes {
     /**
-    * The unique id of the hosted asset in UUID format.
+    * The user provided ID for the asset
     */
-    'id': string;
+    'id'?: string;
     /**
-    * The owner id of the asset.
+    * The attributes of the asset transfer including the status.
     */
-    'owner': string;
+    'owner'?: string;
     /**
-    * The region the asset is hosted, currently only `au` (Australia).
+    * The status of the asset transfer. <ul>   <li>`queued` - the transfer request has been queued</li>   <li>`failed` - the transfer request failed</li> </ul>
     */
-    'region'?: string;
+    'status'?: TransferResponseAttributes.StatusEnum;
     /**
-    * The original render id that created the asset in UUID format. Multiple assets can share the same render id.
-    */
-    'renderId'?: string;
-    /**
-    * The third party id of an asset transferred to an external provider, i.e. Mux, YouTube or S3. If the provider is Shotstack, the providerID is the same as the asset id.
-    */
-    'providerId'?: string;
-    /**
-    * The asset file name.
-    */
-    'filename'?: string;
-    /**
-    * The asset file name.
-    */
-    'url'?: string;
-    /**
-    * The status of the asset. <ul>   <li>`importing` - the asset is being copied to the hosting service</li>   <li>`ready` - the asset is ready to be served to users</li>   <li>`failed` - the asset failed to copy or delete</li>   <li>`deleted` - the asset has been deleted</li> </ul>
-    */
-    'status': AssetResponseAttributes.StatusEnum;
-    /**
-    * The time the asset was created.
+    * The time the asset transfer was created.
     */
     'created'?: string;
-    /**
-    * The time the asset status was last updated.
-    */
-    'updated'?: string;
 
     static discriminator: string | undefined = undefined;
 
@@ -71,56 +47,24 @@ export class AssetResponseAttributes {
             "type": "string"
         },
         {
-            "name": "region",
-            "baseName": "region",
-            "type": "string"
-        },
-        {
-            "name": "renderId",
-            "baseName": "renderId",
-            "type": "string"
-        },
-        {
-            "name": "providerId",
-            "baseName": "providerId",
-            "type": "string"
-        },
-        {
-            "name": "filename",
-            "baseName": "filename",
-            "type": "string"
-        },
-        {
-            "name": "url",
-            "baseName": "url",
-            "type": "string"
-        },
-        {
             "name": "status",
             "baseName": "status",
-            "type": "AssetResponseAttributes.StatusEnum"
+            "type": "TransferResponseAttributes.StatusEnum"
         },
         {
             "name": "created",
             "baseName": "created",
             "type": "string"
-        },
-        {
-            "name": "updated",
-            "baseName": "updated",
-            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return AssetResponseAttributes.attributeTypeMap;
+        return TransferResponseAttributes.attributeTypeMap;
     }
 }
 
-export namespace AssetResponseAttributes {
+export namespace TransferResponseAttributes {
     export enum StatusEnum {
-        IMPORTING = <any> 'importing',
-        READY = <any> 'ready',
-        FAILED = <any> 'failed',
-        DELETED = <any> 'deleted'
+        QUEUED = <any> 'queued',
+        FAILED = <any> 'failed'
     }
 }

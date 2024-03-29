@@ -80,6 +80,10 @@ export * from './timeline';
 export * from './titleAsset';
 export * from './track';
 export * from './transcription';
+export * from './transfer';
+export * from './transferResponse';
+export * from './transferResponseAttributes';
+export * from './transferResponseData';
 export * from './transformation';
 export * from './transition';
 export * from './uploadResponse';
@@ -151,7 +155,6 @@ import { S3Destination } from './s3Destination';
 import { S3DestinationOptions } from './s3DestinationOptions';
 import { ShotstackDestination } from './shotstackDestination';
 import { ShotstackGeneratedAsset } from './shotstackGeneratedAsset';
-import { ShotstackGeneratedAssetOptions } from './shotstackGeneratedAssetOptions';
 import { ShotstackTextToImageOptions } from './shotstackTextToImageOptions';
 import { ShotstackTextToSpeechOptions } from './shotstackTextToSpeechOptions';
 import { Size } from './size';
@@ -176,6 +179,10 @@ import { Timeline } from './timeline';
 import { TitleAsset } from './titleAsset';
 import { Track } from './track';
 import { Transcription } from './transcription';
+import { Transfer } from './transfer';
+import { TransferResponse } from './transferResponse';
+import { TransferResponseAttributes } from './transferResponseAttributes';
+import { TransferResponseData } from './transferResponseData';
 import { Transformation } from './transformation';
 import { Transition } from './transition';
 import { UploadResponse } from './uploadResponse';
@@ -233,6 +240,7 @@ let enumsMap: {[index: string]: any} = {
         "Rendition.FpsEnum": Rendition.FpsEnum,
         "RenditionResponseAttributes.StatusEnum": RenditionResponseAttributes.StatusEnum,
         "ShotstackGeneratedAsset.ProviderEnum": ShotstackGeneratedAsset.ProviderEnum,
+        "ShotstackTextToImageOptions.TypeEnum": ShotstackTextToImageOptions.TypeEnum,
         "ShotstackTextToSpeechOptions.TypeEnum": ShotstackTextToSpeechOptions.TypeEnum,
         "ShotstackTextToSpeechOptions.VoiceEnum": ShotstackTextToSpeechOptions.VoiceEnum,
         "ShotstackTextToSpeechOptions.LanguageEnum": ShotstackTextToSpeechOptions.LanguageEnum,
@@ -242,6 +250,7 @@ let enumsMap: {[index: string]: any} = {
         "TitleAsset.SizeEnum": TitleAsset.SizeEnum,
         "TitleAsset.PositionEnum": TitleAsset.PositionEnum,
         "Transcription.FormatEnum": Transcription.FormatEnum,
+        "TransferResponseAttributes.StatusEnum": TransferResponseAttributes.StatusEnum,
         "Transition.InEnum": Transition.InEnum,
         "Transition.OutEnum": Transition.OutEnum,
         "VideoAsset.VolumeEffectEnum": VideoAsset.VolumeEffectEnum,
@@ -321,6 +330,10 @@ let typeMap: {[index: string]: any} = {
     "TitleAsset": TitleAsset,
     "Track": Track,
     "Transcription": Transcription,
+    "Transfer": Transfer,
+    "TransferResponse": TransferResponse,
+    "TransferResponseAttributes": TransferResponseAttributes,
+    "TransferResponseData": TransferResponseData,
     "Transformation": Transformation,
     "Transition": Transition,
     "UploadResponse": UploadResponse,

@@ -100,7 +100,7 @@ Check generation status:
 import Shotstack, { CreateApiApiKeys } from './dist/index.js';
 
 const apiKey = 'YOUR_API_KEY';
-const basePath = 'https://api.shotstack.io/create/dev';
+const basePath = 'https://api.shotstack.io/create/v1';
 
 const CreateApi = new Shotstack.CreateApi(basePath);
 CreateApi.setApiKey(CreateApiApiKeys.DeveloperKey, apiKey);
@@ -110,6 +110,61 @@ const assetId = '01ht4-dtfsp-e6s59-ktryg-3w27mn';
 CreateApi.getGeneratedAsset(assetId).then((data) => {
   if (data.response.body.data.attributes.status === 'done') {
     console.log(data.response.body.data.attributes.url);
+  }
+});
+```
+
+#### Serve API
+
+Transfer a file to a destination (Pexels to AWS S3):
+
+```javascript
+import Shotstack, { ServeApiApiKeys } from './dist/index.js';
+
+const apiKey = 'YOUR_API_KEY';
+const basePath = 'https://api.shotstack.io/serve/v1';
+
+const ServeApi = new Shotstack.ServeApi(basePath);
+ServeApi.setApiKey(ServeApiApiKeys.DeveloperKey, apiKey);
+
+const s3DestinationOptions = new Shotstack.S3DestinationOptions();
+s3DestinationOptions.region = 'ap-southeast-2';
+s3DestinationOptions.bucket = 'my-bucket';
+s3DestinationOptions.prefix = 'testing';
+s3DestinationOptions.filename = 'photo';
+s3DestinationOptions.acl = 'public-read';
+
+const s3Destination = new Shotstack.S3Destination();
+s3Destination.options = s3DestinationOptions;
+
+const transfer = new Shotstack.Transfer();
+transfer.url = 'https://images.pexels.com/photos/1547813/pexels-photo-1547813.jpeg';
+transfer.id = 'MY_ASSET_ID';
+transfer.destinations = [s3Destination];
+
+ServeApi.postServeAsset(transfer).then((data) => {
+  console.log(data.response.body);
+});
+```
+
+Get asset details:
+
+```javascript
+import Shotstack, { ServeApiApiKeys } from './dist/index.js';
+
+const apiKey = 'YOUR_API_KEY';
+const basePath = 'https://api.shotstack.io/serve/v1';
+
+const ServeApi = new Shotstack.ServeApi(basePath);
+ServeApi.setApiKey(ServeApiApiKeys.DeveloperKey, apiKey);
+
+const assetId = 'MY_ASSET_ID'; // User created asset ID, render ID or source/rendition ID
+
+ServeApi.getAssetByRenderId(assetId).then((data) => {
+  if (data.response.body.data[0].attributes.status === 'ready') {
+    ServeApi.getAsset(data.response.body.data[0].attributes.id).then((data) => {
+      console.log(data.response.body.data.attributes.url);
+    });
   }
 });
 ```
