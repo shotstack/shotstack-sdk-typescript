@@ -12,6 +12,7 @@
 
 import { RequestFile } from './models';
 import { Rendition } from './rendition';
+import { Transcription } from './transcription';
 
 /**
 * The output renditions and transformations that should be generated from the source file.
@@ -21,6 +22,7 @@ export class Outputs {
     * The output renditions and transformations that should be generated from the source file.
     */
     'renditions'?: Array<Rendition>;
+    'transcription'?: Transcription;
 
     static discriminator: string | undefined = undefined;
 
@@ -29,6 +31,11 @@ export class Outputs {
             "name": "renditions",
             "baseName": "renditions",
             "type": "Array<Rendition>"
+        },
+        {
+            "name": "transcription",
+            "baseName": "transcription",
+            "type": "Transcription"
         }    ];
 
     static getAttributeTypeMap() {

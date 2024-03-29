@@ -97,7 +97,7 @@ export class CreateApi {
      * @param id The id of the source file in [KSUID](https://github.com/segmentio/ksuid#what-is-a-ksuid) format.
      */
     public async getGeneratedAsset (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: GeneratedAssetResponse;  }> {
-        const localVarPath = this.basePath + '/path_alias_createassets/{id}'
+        const localVarPath = this.basePath + '/assets/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -169,7 +169,7 @@ export class CreateApi {
      * @param generatedAsset Generate an asset using the specified provider, type and options.
      */
     public async postGenerateAsset (generatedAsset: GeneratedAsset, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: GeneratedAssetResponse;  }> {
-        const localVarPath = this.basePath + '/path_alias_createassets';
+        const localVarPath = this.basePath + '/assets';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['application/json'];

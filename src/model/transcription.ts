@@ -10,12 +10,34 @@
  * Do not edit the class manually.
  */
 
-import { DIDGeneratedAsset } from './dIDGeneratedAsset';
-import { ElevenLabsGeneratedAsset } from './elevenLabsGeneratedAsset';
-import { HeyGenGeneratedAsset } from './heyGenGeneratedAsset';
-import { ShotstackGeneratedAsset } from './shotstackGeneratedAsset';
+import { RequestFile } from './models';
 
 /**
-* A generated asset is a media asset created by the Create API. You can use native or third party providers to generate video, audio and image files using Generative AI services like text-to-speech and text-to-avatar. The following providers are currently available: <ul>   <li><a href=\"#tocs_shotstackgeneratedasset\">ShotstackGeneratedAsset</a></li>   <li><a href=\"#tocs_elevenlabsgeneratedasset\">ElevenLabsGeneratedAsset</a></li>   <li><a href=\"#tocs_heygengeneratedasset\">HeyGenGeneratedAsset</a></li>   <li><a href=\"#tocs_didgeneratedasset\">DIDGeneratedAsset</a></li> </ul>
+* Generate a transcription of the audio in the video. The transcription can be output as a file in SRT or VTT format.
 */
-export type GeneratedAsset = DIDGeneratedAsset | ElevenLabsGeneratedAsset | HeyGenGeneratedAsset | ShotstackGeneratedAsset;
+export class Transcription {
+    /**
+    * The output format of the transcription file. The following formats are available: <ul>   <li>`srt` - SRT captions format</li>   <li>`vtt` - VTT captions format</li> </ul>
+    */
+    'format'?: Transcription.FormatEnum;
+
+    static discriminator: string | undefined = undefined;
+
+    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+        {
+            "name": "format",
+            "baseName": "format",
+            "type": "Transcription.FormatEnum"
+        }    ];
+
+    static getAttributeTypeMap() {
+        return Transcription.attributeTypeMap;
+    }
+}
+
+export namespace Transcription {
+    export enum FormatEnum {
+        SRT = <any> 'srt',
+        VTT = <any> 'vtt'
+    }
+}

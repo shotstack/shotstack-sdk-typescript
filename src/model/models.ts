@@ -52,6 +52,8 @@ export * from './s3Destination';
 export * from './s3DestinationOptions';
 export * from './shotstackDestination';
 export * from './shotstackGeneratedAsset';
+export * from './shotstackGeneratedAssetOptions';
+export * from './shotstackTextToImageOptions';
 export * from './shotstackTextToSpeechOptions';
 export * from './size';
 export * from './skewTransformation';
@@ -74,6 +76,7 @@ export * from './thumbnail';
 export * from './timeline';
 export * from './titleAsset';
 export * from './track';
+export * from './transcription';
 export * from './transformation';
 export * from './transition';
 export * from './uploadResponse';
@@ -145,6 +148,8 @@ import { S3Destination } from './s3Destination';
 import { S3DestinationOptions } from './s3DestinationOptions';
 import { ShotstackDestination } from './shotstackDestination';
 import { ShotstackGeneratedAsset } from './shotstackGeneratedAsset';
+import { ShotstackGeneratedAssetOptions } from './shotstackGeneratedAssetOptions';
+import { ShotstackTextToImageOptions } from './shotstackTextToImageOptions';
 import { ShotstackTextToSpeechOptions } from './shotstackTextToSpeechOptions';
 import { Size } from './size';
 import { SkewTransformation } from './skewTransformation';
@@ -167,6 +172,7 @@ import { Thumbnail } from './thumbnail';
 import { Timeline } from './timeline';
 import { TitleAsset } from './titleAsset';
 import { Track } from './track';
+import { Transcription } from './transcription';
 import { Transformation } from './transformation';
 import { Transition } from './transition';
 import { UploadResponse } from './uploadResponse';
@@ -200,7 +206,6 @@ let enumsMap: {[index: string]: any} = {
         "ElevenLabsGeneratedAsset.ProviderEnum": ElevenLabsGeneratedAsset.ProviderEnum,
         "ElevenLabsTextToSpeechOptions.TypeEnum": ElevenLabsTextToSpeechOptions.TypeEnum,
         "ElevenLabsTextToSpeechOptions.VoiceEnum": ElevenLabsTextToSpeechOptions.VoiceEnum,
-        "GeneratedAsset.ProviderEnum": GeneratedAsset.ProviderEnum,
         "GeneratedAssetResponseAttributes.ProviderEnum": GeneratedAssetResponseAttributes.ProviderEnum,
         "GeneratedAssetResponseAttributes.TypeEnum": GeneratedAssetResponseAttributes.TypeEnum,
         "GeneratedAssetResponseAttributes.StatusEnum": GeneratedAssetResponseAttributes.StatusEnum,
@@ -233,6 +238,7 @@ let enumsMap: {[index: string]: any} = {
         "TitleAsset.StyleEnum": TitleAsset.StyleEnum,
         "TitleAsset.SizeEnum": TitleAsset.SizeEnum,
         "TitleAsset.PositionEnum": TitleAsset.PositionEnum,
+        "Transcription.FormatEnum": Transcription.FormatEnum,
         "Transition.InEnum": Transition.InEnum,
         "Transition.OutEnum": Transition.OutEnum,
         "VideoAsset.VolumeEffectEnum": VideoAsset.VolumeEffectEnum,
@@ -253,7 +259,6 @@ let typeMap: {[index: string]: any} = {
     "ElevenLabsTextToSpeechOptions": ElevenLabsTextToSpeechOptions,
     "FlipTransformation": FlipTransformation,
     "Font": Font,
-    "GeneratedAsset": GeneratedAsset,
     "GeneratedAssetErrorResponse": GeneratedAssetErrorResponse,
     "GeneratedAssetErrorResponseData": GeneratedAssetErrorResponseData,
     "GeneratedAssetResponse": GeneratedAssetResponse,
@@ -289,6 +294,7 @@ let typeMap: {[index: string]: any} = {
     "S3DestinationOptions": S3DestinationOptions,
     "ShotstackDestination": ShotstackDestination,
     "ShotstackGeneratedAsset": ShotstackGeneratedAsset,
+    "ShotstackTextToImageOptions": ShotstackTextToImageOptions,
     "ShotstackTextToSpeechOptions": ShotstackTextToSpeechOptions,
     "Size": Size,
     "SkewTransformation": SkewTransformation,
@@ -311,6 +317,7 @@ let typeMap: {[index: string]: any} = {
     "Timeline": Timeline,
     "TitleAsset": TitleAsset,
     "Track": Track,
+    "Transcription": Transcription,
     "Transformation": Transformation,
     "Transition": Transition,
     "UploadResponse": UploadResponse,

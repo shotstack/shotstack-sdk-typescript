@@ -6,7 +6,7 @@ Work in progress Typescript SDK for the Shotstack API.
 
 #### Edit API
 
-Render a video:
+Render a video (trim start and end):
 
 ```javascript
 import Shotstack, { EditApiApiKeys } from './dist/index.js';
@@ -45,5 +45,71 @@ edit.output = output;
 
 EditApi.postRender(edit).then((data) => {
   console.log(data.response.body);
+});
+```
+
+Check render status:
+
+```javascript
+import Shotstack, { EditApiApiKeys } from './dist/index.js';
+
+const apiKey = 'YOUR_API_KEY';
+const basePath = 'https://api.shotstack.io/edit/v1';
+
+const EditApi = new Shotstack.EditApi(basePath);
+EditApi.setApiKey(EditApiApiKeys.DeveloperKey, apiKey);
+
+const renderId = 'RENDER_ID'; // get this from the response of the postRender method
+
+EditApi.getRender(renderId, { data: false }).then((data) => {
+  if (data.response.body.response.status === 'done') {
+    console.log(data.response.body.response.url);
+  }
+});
+```
+
+#### Create API
+
+Generate an image using Shotstack text-to-image service
+
+```javascript
+import Shotstack, { CreateApiApiKeys } from './dist/index.js';
+
+const apiKey = 'YOUR_API_KEY';
+const basePath = 'https://api.shotstack.io/create/v1';
+
+const CreateApi = new Shotstack.CreateApi(basePath);
+CreateApi.setApiKey(CreateApiApiKeys.DeveloperKey, apiKey);
+
+const shotstackTextToImageOptions = new Shotstack.ShotstackTextToImageOptions();
+shotstackTextToImageOptions.prompt = 'A detailed realistic photograph of Mars, showcasing its orange-red surface and dark outer space in the background with stars';
+shotstackTextToImageOptions.width = 1024;
+shotstackTextToImageOptions.height = 1024;
+
+const shotstackTextToImage = new Shotstack.ShotstackGeneratedAsset();
+shotstackTextToImage.options = shotstackTextToImageOptions;
+
+CreateApi.postGenerateAsset(shotstackTextToImage).then((data) => {
+  console.log(data.response.body);
+});
+```
+
+Check generation status:
+
+```javascript
+import Shotstack, { CreateApiApiKeys } from './dist/index.js';
+
+const apiKey = 'YOUR_API_KEY';
+const basePath = 'https://api.shotstack.io/create/dev';
+
+const CreateApi = new Shotstack.CreateApi(basePath);
+CreateApi.setApiKey(CreateApiApiKeys.DeveloperKey, apiKey);
+
+const assetId = '01ht4-dtfsp-e6s59-ktryg-3w27mn';
+
+CreateApi.getGeneratedAsset(assetId).then((data) => {
+  if (data.response.body.data.attributes.status === 'done') {
+    console.log(data.response.body.data.attributes.url);
+  }
 });
 ```

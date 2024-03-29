@@ -11,17 +11,17 @@
  */
 
 import { RequestFile } from './models';
-import { ShotstackTextToSpeechOptions } from './shotstackTextToSpeechOptions';
+import { ShotstackGeneratedAssetOptions } from './shotstackGeneratedAssetOptions';
 
 /**
-* Generate assets using the native Shotstack provider. Shotstack provides a text-to-speech service.
+* Generate assets using the native Shotstack provider. Shotstack provides a text-to-speech and a text-to-image service.
 */
 export class ShotstackGeneratedAsset {
     /**
     * The name of the provider - set to `shotstack` for Shotstack.
     */
-    'provider'?: ShotstackGeneratedAsset.ProviderEnum = ShotstackGeneratedAsset.ProviderEnum.SHOTSTACK;
-    'options'?: ShotstackTextToSpeechOptions;
+    'provider': ShotstackGeneratedAsset.ProviderEnum = ShotstackGeneratedAsset.ProviderEnum.SHOTSTACK;
+    'options': ShotstackGeneratedAssetOptions;
 
     static discriminator: string | undefined = undefined;
 
@@ -34,7 +34,7 @@ export class ShotstackGeneratedAsset {
         {
             "name": "options",
             "baseName": "options",
-            "type": "ShotstackTextToSpeechOptions"
+            "type": "ShotstackGeneratedAssetOptions"
         }    ];
 
     static getAttributeTypeMap() {

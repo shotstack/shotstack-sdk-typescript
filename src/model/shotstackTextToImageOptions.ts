@@ -10,12 +10,60 @@
  * Do not edit the class manually.
  */
 
-import { DIDGeneratedAsset } from './dIDGeneratedAsset';
-import { ElevenLabsGeneratedAsset } from './elevenLabsGeneratedAsset';
-import { HeyGenGeneratedAsset } from './heyGenGeneratedAsset';
-import { ShotstackGeneratedAsset } from './shotstackGeneratedAsset';
+import { RequestFile } from './models';
 
 /**
-* A generated asset is a media asset created by the Create API. You can use native or third party providers to generate video, audio and image files using Generative AI services like text-to-speech and text-to-avatar. The following providers are currently available: <ul>   <li><a href=\"#tocs_shotstackgeneratedasset\">ShotstackGeneratedAsset</a></li>   <li><a href=\"#tocs_elevenlabsgeneratedasset\">ElevenLabsGeneratedAsset</a></li>   <li><a href=\"#tocs_heygengeneratedasset\">HeyGenGeneratedAsset</a></li>   <li><a href=\"#tocs_didgeneratedasset\">DIDGeneratedAsset</a></li> </ul>
+* Options for the Shotstack text-to-image service. Set a text prompt to generate anb image from. The output will be  generated as a PNG file.
 */
-export type GeneratedAsset = DIDGeneratedAsset | ElevenLabsGeneratedAsset | HeyGenGeneratedAsset | ShotstackGeneratedAsset;
+export class ShotstackTextToImageOptions {
+    /**
+    * The type of asset to generate - set to `text-to-image` for text-to-image.
+    */
+    'type': ShotstackTextToImageOptions.TypeEnum = ShotstackTextToImageOptions.TypeEnum.TEXT_TO_IMAGE;
+    /**
+    * The text prompt to generate an image from.
+    */
+    'prompt': string;
+    /**
+    * The width of the image in pixels.
+    */
+    'width': number;
+    /**
+    * The height of the image in pixels.
+    */
+    'height': number;
+
+    static discriminator: string | undefined = undefined;
+
+    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
+        {
+            "name": "type",
+            "baseName": "type",
+            "type": "ShotstackTextToImageOptions.TypeEnum"
+        },
+        {
+            "name": "prompt",
+            "baseName": "prompt",
+            "type": "string"
+        },
+        {
+            "name": "width",
+            "baseName": "width",
+            "type": "number"
+        },
+        {
+            "name": "height",
+            "baseName": "height",
+            "type": "number"
+        }    ];
+
+    static getAttributeTypeMap() {
+        return ShotstackTextToImageOptions.attributeTypeMap;
+    }
+}
+
+export namespace ShotstackTextToImageOptions {
+    export enum TypeEnum {
+        TEXT_TO_IMAGE = <any> 'text-to-image'
+    }
+}

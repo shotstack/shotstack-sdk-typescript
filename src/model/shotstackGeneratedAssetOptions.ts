@@ -10,12 +10,10 @@
  * Do not edit the class manually.
  */
 
-import { DIDGeneratedAsset } from './dIDGeneratedAsset';
-import { ElevenLabsGeneratedAsset } from './elevenLabsGeneratedAsset';
-import { HeyGenGeneratedAsset } from './heyGenGeneratedAsset';
-import { ShotstackGeneratedAsset } from './shotstackGeneratedAsset';
+import { ShotstackTextToImageOptions } from './shotstackTextToImageOptions';
+import { ShotstackTextToSpeechOptions } from './shotstackTextToSpeechOptions';
 
 /**
-* A generated asset is a media asset created by the Create API. You can use native or third party providers to generate video, audio and image files using Generative AI services like text-to-speech and text-to-avatar. The following providers are currently available: <ul>   <li><a href=\"#tocs_shotstackgeneratedasset\">ShotstackGeneratedAsset</a></li>   <li><a href=\"#tocs_elevenlabsgeneratedasset\">ElevenLabsGeneratedAsset</a></li>   <li><a href=\"#tocs_heygengeneratedasset\">HeyGenGeneratedAsset</a></li>   <li><a href=\"#tocs_didgeneratedasset\">DIDGeneratedAsset</a></li> </ul>
+* Generate assets using the native Shotstack provider AI services.  The following AI generation services are available: <ul>   <li><a href=\"#tocs_shotstacktexttospeechoptions\">ShotstackTextToSpeechOptions</a></li>   <li><a href=\"#tocs_shotstacktexttoimageoptions\">ShotstackTextToImageOptions</a></li> </ul>
 */
-export type GeneratedAsset = DIDGeneratedAsset | ElevenLabsGeneratedAsset | HeyGenGeneratedAsset | ShotstackGeneratedAsset;
+export type ShotstackGeneratedAssetOptions = ShotstackTextToSpeechOptions | ShotstackTextToImageOptions;
