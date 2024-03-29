@@ -68,6 +68,63 @@ EditApi.getRender(renderId, { data: false }).then((data) => {
 });
 ```
 
+#### Ingest API
+
+Ingest a video and create a rendition:
+
+```javascript
+import Shotstack, { IngestApiApiKeys } from './dist/index.js';
+
+const apiKey = 'YOUR_API_KEY';
+const basePath = 'https://api.shotstack.io/ingest/v1';
+
+const IngestApi = new Shotstack.IngestApi(basePath);
+IngestApi.setApiKey(IngestApiApiKeys.DeveloperKey, apiKey);
+
+const size = new Shotstack.Size();
+size.width = 1280;
+size.height = 720;
+
+const rendition = new Shotstack.Rendition();
+rendition.format = Shotstack.Rendition.FormatEnum.MP4;
+rendition.size = size;
+
+const outputs = new Shotstack.Outputs();
+outputs.renditions = [rendition];
+
+const source = new Shotstack.Source();
+source.url = 'https://github.com/shotstack/test-media/raw/main/captioning/scott-ko.mp4';
+source.outputs = outputs;
+
+IngestApi.postSource(source).then((data) => {
+  console.log(data.response.body);
+});
+```
+
+Get source and rendition details:
+
+```javascript
+import Shotstack, { IngestApiApiKeys } from './dist/index.js';
+
+const apiKey = 'YOUR_API_KEY';
+const basePath = 'https://api.shotstack.io/ingest/v1';
+
+const IngestApi = new Shotstack.IngestApi(basePath);
+IngestApi.setApiKey(IngestApiApiKeys.DeveloperKey, apiKey);
+
+const sourceId = 'zzy89yhy-1w4y-xe41-t3v6-1gafvp0qmhvz';
+
+IngestApi.getSource(sourceId).then((data) => {
+  if (data.response.body.data.attributes.status === 'ready') {
+    console.log('Source:', data.response.body.data.attributes.source);
+
+    if (data.response.body.data.attributes.outputs.renditions[0].status === 'ready') {
+      console.log('Rendition:', data.response.body.data.attributes.outputs.renditions[0].url);
+    }
+  }
+});
+```
+
 #### Create API
 
 Generate an image using Shotstack text-to-image service
