@@ -64,13 +64,13 @@ export class DIDTextToAvatarOptions {
 
 export namespace DIDTextToAvatarOptions {
     export enum TypeEnum {
-        TextToAvatar = <any> 'text-to-avatar'
+        TEXT_TO_AVATAR = <any> 'text-to-avatar'
     }
     export enum AvatarEnum {
-        Jack = <any> 'jack',
-        Lana = <any> 'lana',
-        Lily = <any> 'lily',
-        Matt = <any> 'matt',
-        Rian = <any> 'rian'
+        JACK = <any> 'jack',
+        LANA = <any> 'lana',
+        LILY = <any> 'lily',
+        MATT = <any> 'matt',
+        RIAN = <any> 'rian'
     }
 }

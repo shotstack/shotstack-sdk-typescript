@@ -55,17 +55,17 @@ export class ElevenLabsTextToSpeechOptions {
 
 export namespace ElevenLabsTextToSpeechOptions {
     export enum TypeEnum {
-        TextToSpeech = <any> 'text-to-speech'
+        TEXT_TO_SPEECH = <any> 'text-to-speech'
     }
     export enum VoiceEnum {
-        Adam = <any> 'Adam',
-        Antoni = <any> 'Antoni',
-        Arnold = <any> 'Arnold',
-        Bella = <any> 'Bella',
-        Domi = <any> 'Domi',
-        Elli = <any> 'Elli',
-        Josh = <any> 'Josh',
-        Rachel = <any> 'Rachel',
-        Sam = <any> 'Sam'
+        ADAM = <any> 'Adam',
+        ANTONI = <any> 'Antoni',
+        ARNOLD = <any> 'Arnold',
+        BELLA = <any> 'Bella',
+        DOMI = <any> 'Domi',
+        ELLI = <any> 'Elli',
+        JOSH = <any> 'Josh',
+        RACHEL = <any> 'Rachel',
+        SAM = <any> 'Sam'
     }
 }

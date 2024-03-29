@@ -138,18 +138,18 @@ export class Output {
 
 export namespace Output {
     export enum FormatEnum {
-        Mp4 = <any> 'mp4',
-        Gif = <any> 'gif',
-        Mp3 = <any> 'mp3',
-        Jpg = <any> 'jpg',
-        Png = <any> 'png',
-        Bmp = <any> 'bmp'
+        MP4 = <any> 'mp4',
+        GIF = <any> 'gif',
+        MP3 = <any> 'mp3',
+        JPG = <any> 'jpg',
+        PNG = <any> 'png',
+        BMP = <any> 'bmp'
     }
     export enum ResolutionEnum {
-        Preview = <any> 'preview',
-        Mobile = <any> 'mobile',
-        Sd = <any> 'sd',
-        Hd = <any> 'hd',
+        PREVIEW = <any> 'preview',
+        MOBILE = <any> 'mobile',
+        SD = <any> 'sd',
+        HD = <any> 'hd',
         _1080 = <any> '1080'
     }
     export enum AspectRatioEnum {
@@ -173,15 +173,15 @@ export namespace Output {
         NUMBER_60 = <any> 60
     }
     export enum ScaleToEnum {
-        Preview = <any> 'preview',
-        Mobile = <any> 'mobile',
-        Sd = <any> 'sd',
-        Hd = <any> 'hd',
+        PREVIEW = <any> 'preview',
+        MOBILE = <any> 'mobile',
+        SD = <any> 'sd',
+        HD = <any> 'hd',
         _1080 = <any> '1080'
     }
     export enum QualityEnum {
-        Low = <any> 'low',
-        Medium = <any> 'medium',
-        High = <any> 'high'
+        LOW = <any> 'low',
+        MEDIUM = <any> 'medium',
+        HIGH = <any> 'high'
     }
 }

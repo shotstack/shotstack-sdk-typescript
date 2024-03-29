@@ -89,22 +89,22 @@ export class Rendition {
 
 export namespace Rendition {
     export enum FormatEnum {
-        Mp4 = <any> 'mp4',
-        Mp3 = <any> 'mp3',
-        Jpg = <any> 'jpg',
-        Png = <any> 'png'
+        MP4 = <any> 'mp4',
+        MP3 = <any> 'mp3',
+        JPG = <any> 'jpg',
+        PNG = <any> 'png'
     }
     export enum FitEnum {
-        Cover = <any> 'cover',
-        Contain = <any> 'contain',
-        Crop = <any> 'crop'
+        COVER = <any> 'cover',
+        CONTAIN = <any> 'contain',
+        CROP = <any> 'crop'
     }
     export enum ResolutionEnum {
-        Preview = <any> 'preview',
-        Mobile = <any> 'mobile',
-        Sd = <any> 'sd',
-        Hd = <any> 'hd',
-        Fhd = <any> 'fhd'
+        PREVIEW = <any> 'preview',
+        MOBILE = <any> 'mobile',
+        SD = <any> 'sd',
+        HD = <any> 'hd',
+        FHD = <any> 'fhd'
     }
     export enum FpsEnum {
         NUMBER_12 = <any> 12,

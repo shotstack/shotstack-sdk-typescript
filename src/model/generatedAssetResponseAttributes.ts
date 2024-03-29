@@ -91,20 +91,20 @@ export class GeneratedAssetResponseAttributes {
 
 export namespace GeneratedAssetResponseAttributes {
     export enum ProviderEnum {
-        Shotstack = <any> 'shotstack',
-        Elevenlabs = <any> 'elevenlabs',
-        Heygen = <any> 'heygen',
-        DId = <any> 'd-id'
+        SHOTSTACK = <any> 'shotstack',
+        ELEVENLABS = <any> 'elevenlabs',
+        HEYGEN = <any> 'heygen',
+        D_ID = <any> 'd-id'
     }
     export enum TypeEnum {
-        Speech = <any> 'text-to-speech',
-        Avatar = <any> 'text-to-avatar'
+        SPEECH = <any> 'text-to-speech',
+        AVATAR = <any> 'text-to-avatar'
     }
     export enum StatusEnum {
-        Queued = <any> 'queued',
-        Processing = <any> 'processing',
-        Saving = <any> 'saving',
-        Done = <any> 'done',
-        Failed = <any> 'failed'
+        QUEUED = <any> 'queued',
+        PROCESSING = <any> 'processing',
+        SAVING = <any> 'saving',
+        DONE = <any> 'done',
+        FAILED = <any> 'failed'
     }
 }

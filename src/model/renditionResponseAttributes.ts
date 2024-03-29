@@ -107,11 +107,11 @@ export class RenditionResponseAttributes {
 
 export namespace RenditionResponseAttributes {
     export enum StatusEnum {
-        Queued = <any> 'queued',
-        Importing = <any> 'importing',
-        Ready = <any> 'ready',
-        Failed = <any> 'failed',
-        Deleted = <any> 'deleted',
-        Overwritten = <any> 'overwritten'
+        QUEUED = <any> 'queued',
+        IMPORTING = <any> 'importing',
+        READY = <any> 'ready',
+        FAILED = <any> 'failed',
+        DELETED = <any> 'deleted',
+        OVERWRITTEN = <any> 'overwritten'
     }
 }

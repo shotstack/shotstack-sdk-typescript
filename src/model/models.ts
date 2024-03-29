@@ -94,7 +94,6 @@ export interface RequestDetailedFile {
 export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 
 
-import { Asset } from './asset';
 import { AssetRenderResponse } from './assetRenderResponse';
 import { AssetResponse } from './assetResponse';
 import { AssetResponseAttributes } from './assetResponseAttributes';
@@ -188,11 +187,6 @@ let primitives = [
                  ];
 
 let enumsMap: {[index: string]: any} = {
-        "Asset.VolumeEffectEnum": Asset.VolumeEffectEnum,
-        "Asset.StyleEnum": Asset.StyleEnum,
-        "Asset.SizeEnum": Asset.SizeEnum,
-        "Asset.PositionEnum": Asset.PositionEnum,
-        "Asset.EffectEnum": Asset.EffectEnum,
         "AssetResponseAttributes.StatusEnum": AssetResponseAttributes.StatusEnum,
         "AudioAsset.EffectEnum": AudioAsset.EffectEnum,
         "Clip.FitEnum": Clip.FitEnum,
@@ -245,7 +239,6 @@ let enumsMap: {[index: string]: any} = {
 }
 
 let typeMap: {[index: string]: any} = {
-    "Asset": Asset,
     "AssetRenderResponse": AssetRenderResponse,
     "AssetResponse": AssetResponse,
     "AssetResponseAttributes": AssetResponseAttributes,
@@ -255,7 +248,6 @@ let typeMap: {[index: string]: any} = {
     "Crop": Crop,
     "DIDGeneratedAsset": DIDGeneratedAsset,
     "DIDTextToAvatarOptions": DIDTextToAvatarOptions,
-    "Destinations": Destinations,
     "Edit": Edit,
     "ElevenLabsGeneratedAsset": ElevenLabsGeneratedAsset,
     "ElevenLabsTextToSpeechOptions": ElevenLabsTextToSpeechOptions,

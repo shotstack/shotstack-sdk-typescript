@@ -70,7 +70,7 @@ export class Edit {
 
 export namespace Edit {
     export enum DiskEnum {
-        Local = <any> 'local',
-        Mount = <any> 'mount'
+        LOCAL = <any> 'local',
+        MOUNT = <any> 'mount'
     }
 }

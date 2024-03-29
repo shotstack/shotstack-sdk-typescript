@@ -1,9 +1,9 @@
 {
     "compilerOptions": {
+        "rootDir": "./src",
         "module": "commonjs",
         "noImplicitAny": false,
-        "suppressImplicitAnyIndexErrors": true,
-        "target": "ES5",
+        "target": "ES6",
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
         "strict": true,
@@ -18,6 +18,9 @@
             "node_modules/@types"
         ]
     },
+    "include": [
+        "src/**/*.ts"
+    ],
     "exclude": [
         "dist",
         "node_modules"

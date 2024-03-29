@@ -98,35 +98,35 @@ export class TitleAsset {
 
 export namespace TitleAsset {
     export enum StyleEnum {
-        Minimal = <any> 'minimal',
-        Blockbuster = <any> 'blockbuster',
-        Vogue = <any> 'vogue',
-        Sketchy = <any> 'sketchy',
-        Skinny = <any> 'skinny',
-        Chunk = <any> 'chunk',
-        ChunkLight = <any> 'chunkLight',
-        Marker = <any> 'marker',
-        Future = <any> 'future',
-        Subtitle = <any> 'subtitle'
+        MINIMAL = <any> 'minimal',
+        BLOCKBUSTER = <any> 'blockbuster',
+        VOGUE = <any> 'vogue',
+        SKETCHY = <any> 'sketchy',
+        SKINNY = <any> 'skinny',
+        CHUNK = <any> 'chunk',
+        CHUNK_LIGHT = <any> 'chunkLight',
+        MARKER = <any> 'marker',
+        FUTURE = <any> 'future',
+        SUBTITLE = <any> 'subtitle'
     }
     export enum SizeEnum {
-        XxSmall = <any> 'xx-small',
-        XSmall = <any> 'x-small',
-        Small = <any> 'small',
-        Medium = <any> 'medium',
-        Large = <any> 'large',
-        XLarge = <any> 'x-large',
-        XxLarge = <any> 'xx-large'
+        XX_SMALL = <any> 'xx-small',
+        X_SMALL = <any> 'x-small',
+        SMALL = <any> 'small',
+        MEDIUM = <any> 'medium',
+        LARGE = <any> 'large',
+        X_LARGE = <any> 'x-large',
+        XX_LARGE = <any> 'xx-large'
     }
     export enum PositionEnum {
-        Top = <any> 'top',
-        TopRight = <any> 'topRight',
-        Right = <any> 'right',
-        BottomRight = <any> 'bottomRight',
-        Bottom = <any> 'bottom',
-        BottomLeft = <any> 'bottomLeft',
-        Left = <any> 'left',
-        TopLeft = <any> 'topLeft',
-        Center = <any> 'center'
+        TOP = <any> 'top',
+        TOP_RIGHT = <any> 'topRight',
+        RIGHT = <any> 'right',
+        BOTTOM_RIGHT = <any> 'bottomRight',
+        BOTTOM = <any> 'bottom',
+        BOTTOM_LEFT = <any> 'bottomLeft',
+        LEFT = <any> 'left',
+        TOP_LEFT = <any> 'topLeft',
+        CENTER = <any> 'center'
     }
 }

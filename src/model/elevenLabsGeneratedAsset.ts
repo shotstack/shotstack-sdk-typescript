@@ -20,7 +20,7 @@ export class ElevenLabsGeneratedAsset {
     /**
     * The name of the provider - set to `elevenlabs` for ElevenLabs.
     */
-    'provider'?: ElevenLabsGeneratedAsset.ProviderEnum = ElevenLabsGeneratedAsset.ProviderEnum.Elevenlabs;
+    'provider'?: ElevenLabsGeneratedAsset.ProviderEnum = ElevenLabsGeneratedAsset.ProviderEnum.ELEVENLABS;
     'options'?: ElevenLabsTextToSpeechOptions;
 
     static discriminator: string | undefined = undefined;
@@ -44,6 +44,6 @@ export class ElevenLabsGeneratedAsset {
 
 export namespace ElevenLabsGeneratedAsset {
     export enum ProviderEnum {
-        Elevenlabs = <any> 'elevenlabs'
+        ELEVENLABS = <any> 'elevenlabs'
     }
 }

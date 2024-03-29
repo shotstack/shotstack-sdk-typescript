@@ -55,8 +55,8 @@ export class Soundtrack {
 
 export namespace Soundtrack {
     export enum EffectEnum {
-        FadeIn = <any> 'fadeIn',
-        FadeOut = <any> 'fadeOut',
-        FadeInFadeOut = <any> 'fadeInFadeOut'
+        FADE_IN = <any> 'fadeIn',
+        FADE_OUT = <any> 'fadeOut',
+        FADE_IN_FADE_OUT = <any> 'fadeInFadeOut'
     }
 }

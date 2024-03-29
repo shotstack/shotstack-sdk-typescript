@@ -24,7 +24,7 @@ export class GeneratedAsset {
     /**
     * The name of the provider - set to `d-id` for D-ID.
     */
-    'provider'?: GeneratedAsset.ProviderEnum = GeneratedAsset.ProviderEnum.DId;
+    'provider'?: GeneratedAsset.ProviderEnum = GeneratedAsset.ProviderEnum.D_ID;
     'options'?: DIDTextToAvatarOptions;
 
     static discriminator: string | undefined = "provider";
@@ -48,6 +48,6 @@ export class GeneratedAsset {
 
 export namespace GeneratedAsset {
     export enum ProviderEnum {
-        DId = <any> 'd-id'
+        D_ID = <any> 'd-id'
     }
 }

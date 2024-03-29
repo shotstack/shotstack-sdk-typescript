@@ -128,49 +128,49 @@ export class Clip {
 
 export namespace Clip {
     export enum FitEnum {
-        Cover = <any> 'cover',
-        Contain = <any> 'contain',
-        Crop = <any> 'crop',
-        None = <any> 'none'
+        COVER = <any> 'cover',
+        CONTAIN = <any> 'contain',
+        CROP = <any> 'crop',
+        NONE = <any> 'none'
     }
     export enum PositionEnum {
-        Top = <any> 'top',
-        TopRight = <any> 'topRight',
-        Right = <any> 'right',
-        BottomRight = <any> 'bottomRight',
-        Bottom = <any> 'bottom',
-        BottomLeft = <any> 'bottomLeft',
-        Left = <any> 'left',
-        TopLeft = <any> 'topLeft',
-        Center = <any> 'center'
+        TOP = <any> 'top',
+        TOP_RIGHT = <any> 'topRight',
+        RIGHT = <any> 'right',
+        BOTTOM_RIGHT = <any> 'bottomRight',
+        BOTTOM = <any> 'bottom',
+        BOTTOM_LEFT = <any> 'bottomLeft',
+        LEFT = <any> 'left',
+        TOP_LEFT = <any> 'topLeft',
+        CENTER = <any> 'center'
     }
     export enum EffectEnum {
-        ZoomIn = <any> 'zoomIn',
-        ZoomInSlow = <any> 'zoomInSlow',
-        ZoomInFast = <any> 'zoomInFast',
-        ZoomOut = <any> 'zoomOut',
-        ZoomOutSlow = <any> 'zoomOutSlow',
-        ZoomOutFast = <any> 'zoomOutFast',
-        SlideLeft = <any> 'slideLeft',
-        SlideLeftSlow = <any> 'slideLeftSlow',
-        SlideLeftFast = <any> 'slideLeftFast',
-        SlideRight = <any> 'slideRight',
-        SlideRightSlow = <any> 'slideRightSlow',
-        SlideRightFast = <any> 'slideRightFast',
-        SlideUp = <any> 'slideUp',
-        SlideUpSlow = <any> 'slideUpSlow',
-        SlideUpFast = <any> 'slideUpFast',
-        SlideDown = <any> 'slideDown',
-        SlideDownSlow = <any> 'slideDownSlow',
-        SlideDownFast = <any> 'slideDownFast'
+        ZOOM_IN = <any> 'zoomIn',
+        ZOOM_IN_SLOW = <any> 'zoomInSlow',
+        ZOOM_IN_FAST = <any> 'zoomInFast',
+        ZOOM_OUT = <any> 'zoomOut',
+        ZOOM_OUT_SLOW = <any> 'zoomOutSlow',
+        ZOOM_OUT_FAST = <any> 'zoomOutFast',
+        SLIDE_LEFT = <any> 'slideLeft',
+        SLIDE_LEFT_SLOW = <any> 'slideLeftSlow',
+        SLIDE_LEFT_FAST = <any> 'slideLeftFast',
+        SLIDE_RIGHT = <any> 'slideRight',
+        SLIDE_RIGHT_SLOW = <any> 'slideRightSlow',
+        SLIDE_RIGHT_FAST = <any> 'slideRightFast',
+        SLIDE_UP = <any> 'slideUp',
+        SLIDE_UP_SLOW = <any> 'slideUpSlow',
+        SLIDE_UP_FAST = <any> 'slideUpFast',
+        SLIDE_DOWN = <any> 'slideDown',
+        SLIDE_DOWN_SLOW = <any> 'slideDownSlow',
+        SLIDE_DOWN_FAST = <any> 'slideDownFast'
     }
     export enum FilterEnum {
-        Boost = <any> 'boost',
-        Contrast = <any> 'contrast',
-        Darken = <any> 'darken',
-        Greyscale = <any> 'greyscale',
-        Lighten = <any> 'lighten',
-        Muted = <any> 'muted',
-        Negative = <any> 'negative'
+        BOOST = <any> 'boost',
+        CONTRAST = <any> 'contrast',
+        DARKEN = <any> 'darken',
+        GREYSCALE = <any> 'greyscale',
+        LIGHTEN = <any> 'lighten',
+        MUTED = <any> 'muted',
+        NEGATIVE = <any> 'negative'
     }
 }

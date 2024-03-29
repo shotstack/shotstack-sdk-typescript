@@ -143,11 +143,11 @@ export class RenderResponseData {
 
 export namespace RenderResponseData {
     export enum StatusEnum {
-        Queued = <any> 'queued',
-        Fetching = <any> 'fetching',
-        Rendering = <any> 'rendering',
-        Saving = <any> 'saving',
-        Done = <any> 'done',
-        Failed = <any> 'failed'
+        QUEUED = <any> 'queued',
+        FETCHING = <any> 'fetching',
+        RENDERING = <any> 'rendering',
+        SAVING = <any> 'saving',
+        DONE = <any> 'done',
+        FAILED = <any> 'failed'
     }
 }

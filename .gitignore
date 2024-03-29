@@ -1,4 +1,6 @@
 wwwroot/*.js
 node_modules
+package-lock.json
 typings
 dist
+*.mjs

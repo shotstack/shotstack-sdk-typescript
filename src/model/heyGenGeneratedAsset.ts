@@ -20,7 +20,7 @@ export class HeyGenGeneratedAsset {
     /**
     * The name of the provider - set to `heygen` for HeyGen.
     */
-    'provider'?: HeyGenGeneratedAsset.ProviderEnum = HeyGenGeneratedAsset.ProviderEnum.Heygen;
+    'provider'?: HeyGenGeneratedAsset.ProviderEnum = HeyGenGeneratedAsset.ProviderEnum.HEYGEN;
     'options'?: HeyGenTextToAvatarOptions;
 
     static discriminator: string | undefined = undefined;
@@ -44,6 +44,6 @@ export class HeyGenGeneratedAsset {
 
 export namespace HeyGenGeneratedAsset {
     export enum ProviderEnum {
-        Heygen = <any> 'heygen'
+        HEYGEN = <any> 'heygen'
     }
 }

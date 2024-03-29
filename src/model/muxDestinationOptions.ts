@@ -46,7 +46,7 @@ export class MuxDestinationOptions {
 
 export namespace MuxDestinationOptions {
     export enum PlaybackPolicyEnum {
-        Public = <any> 'public',
-        Signed = <any> 'signed'
+        PUBLIC = <any> 'public',
+        SIGNED = <any> 'signed'
     }
 }

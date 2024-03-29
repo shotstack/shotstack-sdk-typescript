@@ -20,7 +20,7 @@ export class ShotstackGeneratedAsset {
     /**
     * The name of the provider - set to `shotstack` for Shotstack.
     */
-    'provider'?: ShotstackGeneratedAsset.ProviderEnum = ShotstackGeneratedAsset.ProviderEnum.Shotstack;
+    'provider'?: ShotstackGeneratedAsset.ProviderEnum = ShotstackGeneratedAsset.ProviderEnum.SHOTSTACK;
     'options'?: ShotstackTextToSpeechOptions;
 
     static discriminator: string | undefined = undefined;
@@ -44,6 +44,6 @@ export class ShotstackGeneratedAsset {
 
 export namespace ShotstackGeneratedAsset {
     export enum ProviderEnum {
-        Shotstack = <any> 'shotstack'
+        SHOTSTACK = <any> 'shotstack'
     }
 }

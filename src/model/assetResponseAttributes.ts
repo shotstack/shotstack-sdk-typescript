@@ -118,9 +118,9 @@ export class AssetResponseAttributes {
 
 export namespace AssetResponseAttributes {
     export enum StatusEnum {
-        Importing = <any> 'importing',
-        Ready = <any> 'ready',
-        Failed = <any> 'failed',
-        Deleted = <any> 'deleted'
+        IMPORTING = <any> 'importing',
+        READY = <any> 'ready',
+        FAILED = <any> 'failed',
+        DELETED = <any> 'deleted'
     }
 }
