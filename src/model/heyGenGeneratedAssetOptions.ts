@@ -11,39 +11,9 @@
  */
 
 import { RequestFile } from './models';
-import { HeyGenGeneratedAssetOptions } from './heyGenGeneratedAssetOptions';
+import { HeyGenTextToAvatarOptions } from './heyGenTextToAvatarOptions';
 
 /**
-* Generate assets using HeyGen. HeyGen provide a text-to-avatar service.
+* Generate assets using the third party HeyGen provider AI services.  The following AI generation services are available: <ul>   <li><a href=\"#tocs_heygentexttoavataroptions\">HeyGenTextToAvatarOptions</a></li> </ul>
 */
-export class HeyGenGeneratedAsset {
-    /**
-    * The name of the provider - set to `heygen` for HeyGen.
-    */
-    'provider'?: HeyGenGeneratedAsset.ProviderEnum = HeyGenGeneratedAsset.ProviderEnum.HEYGEN;
-    'options'?: HeyGenGeneratedAssetOptions;
-
-    static discriminator: string | undefined = undefined;
-
-    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-        {
-            "name": "provider",
-            "baseName": "provider",
-            "type": "HeyGenGeneratedAsset.ProviderEnum"
-        },
-        {
-            "name": "options",
-            "baseName": "options",
-            "type": "HeyGenGeneratedAssetOptions"
-        }    ];
-
-    static getAttributeTypeMap() {
-        return HeyGenGeneratedAsset.attributeTypeMap;
-    }
-}
-
-export namespace HeyGenGeneratedAsset {
-    export enum ProviderEnum {
-        HEYGEN = <any> 'heygen'
-    }
-}
+export type HeyGenGeneratedAssetOptions = HeyGenTextToAvatarOptions;

@@ -11,7 +11,7 @@
  */
 
 import { RequestFile } from './models';
-import { DIDTextToAvatarOptions } from './dIDTextToAvatarOptions';
+import { DIDGeneratedAssetOptions } from './dIDGeneratedAssetOptions';
 
 /**
 * Generate assets using D-ID. D-ID provide a text-to-avatar service.
@@ -20,8 +20,8 @@ export class DIDGeneratedAsset {
     /**
     * The name of the provider - set to `d-id` for D-ID.
     */
-    'provider'?: DIDGeneratedAsset.ProviderEnum = DIDGeneratedAsset.ProviderEnum.D_ID;
-    'options'?: DIDTextToAvatarOptions;
+    'provider': DIDGeneratedAsset.ProviderEnum = DIDGeneratedAsset.ProviderEnum.D_ID;
+    'options': DIDGeneratedAssetOptions;
 
     static discriminator: string | undefined = undefined;
 
@@ -34,7 +34,7 @@ export class DIDGeneratedAsset {
         {
             "name": "options",
             "baseName": "options",
-            "type": "DIDTextToAvatarOptions"
+            "type": "DIDGeneratedAssetOptions"
         }    ];
 
     static getAttributeTypeMap() {

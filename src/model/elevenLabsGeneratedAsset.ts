@@ -11,7 +11,7 @@
  */
 
 import { RequestFile } from './models';
-import { ElevenLabsTextToSpeechOptions } from './elevenLabsTextToSpeechOptions';
+import { ElevenLabsGeneratedAssetOptions } from './elevenLabsGeneratedAssetOptions';
 
 /**
 * Generate assets using ElevenLabs. ElevenLabs provide a text-to-speech service.
@@ -21,7 +21,7 @@ export class ElevenLabsGeneratedAsset {
     * The name of the provider - set to `elevenlabs` for ElevenLabs.
     */
     'provider'?: ElevenLabsGeneratedAsset.ProviderEnum = ElevenLabsGeneratedAsset.ProviderEnum.ELEVENLABS;
-    'options'?: ElevenLabsTextToSpeechOptions;
+    'options'?: ElevenLabsGeneratedAssetOptions;
 
     static discriminator: string | undefined = undefined;
 
@@ -34,7 +34,7 @@ export class ElevenLabsGeneratedAsset {
         {
             "name": "options",
             "baseName": "options",
-            "type": "ElevenLabsTextToSpeechOptions"
+            "type": "ElevenLabsGeneratedAssetOptions"
         }    ];
 
     static getAttributeTypeMap() {
