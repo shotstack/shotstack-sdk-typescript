@@ -121,7 +121,6 @@ export interface RequestDetailedFile {
 export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 
 
-import { Asset } from './asset';
 import { AssetRenderResponse } from './assetRenderResponse';
 import { AssetResponse } from './assetResponse';
 import { AssetResponseAttributes } from './assetResponseAttributes';
@@ -133,7 +132,6 @@ import { Crop } from './crop';
 import { DIDGeneratedAsset } from './dIDGeneratedAsset';
 import { DIDGeneratedAssetOptions } from './dIDGeneratedAssetOptions';
 import { DIDTextToAvatarOptions } from './dIDTextToAvatarOptions';
-import { Destinations } from './destinations';
 import { DolbyEnhancement } from './dolbyEnhancement';
 import { DolbyEnhancementOptions } from './dolbyEnhancementOptions';
 import { Edit } from './edit';
@@ -143,7 +141,6 @@ import { ElevenLabsTextToSpeechOptions } from './elevenLabsTextToSpeechOptions';
 import { Enhancements } from './enhancements';
 import { FlipTransformation } from './flipTransformation';
 import { Font } from './font';
-import { GeneratedAsset } from './generatedAsset';
 import { GeneratedAssetErrorResponse } from './generatedAssetErrorResponse';
 import { GeneratedAssetErrorResponseData } from './generatedAssetErrorResponseData';
 import { GeneratedAssetResponse } from './generatedAssetResponse';
@@ -242,11 +239,6 @@ let primitives = [
                  ];
 
 let enumsMap: {[index: string]: any} = {
-        "Asset.VolumeEffectEnum": Asset.VolumeEffectEnum,
-        "Asset.StyleEnum": Asset.StyleEnum,
-        "Asset.SizeEnum": Asset.SizeEnum,
-        "Asset.PositionEnum": Asset.PositionEnum,
-        "Asset.EffectEnum": Asset.EffectEnum,
         "AssetResponseAttributes.StatusEnum": AssetResponseAttributes.StatusEnum,
         "AudioAsset.EffectEnum": AudioAsset.EffectEnum,
         "Clip.FitEnum": Clip.FitEnum,
@@ -265,7 +257,6 @@ let enumsMap: {[index: string]: any} = {
         "ElevenLabsGeneratedAssetOptions.VoiceEnum": ElevenLabsGeneratedAssetOptions.VoiceEnum,
         "ElevenLabsTextToSpeechOptions.TypeEnum": ElevenLabsTextToSpeechOptions.TypeEnum,
         "ElevenLabsTextToSpeechOptions.VoiceEnum": ElevenLabsTextToSpeechOptions.VoiceEnum,
-        "GeneratedAsset.ProviderEnum": GeneratedAsset.ProviderEnum,
         "GeneratedAssetResponseAttributes.ProviderEnum": GeneratedAssetResponseAttributes.ProviderEnum,
         "GeneratedAssetResponseAttributes.TypeEnum": GeneratedAssetResponseAttributes.TypeEnum,
         "GeneratedAssetResponseAttributes.StatusEnum": GeneratedAssetResponseAttributes.StatusEnum,
@@ -329,7 +320,6 @@ let enumsMap: {[index: string]: any} = {
 }
 
 let typeMap: {[index: string]: any} = {
-    "Asset": Asset,
     "AssetRenderResponse": AssetRenderResponse,
     "AssetResponse": AssetResponse,
     "AssetResponseAttributes": AssetResponseAttributes,
@@ -341,7 +331,6 @@ let typeMap: {[index: string]: any} = {
     "DIDGeneratedAsset": DIDGeneratedAsset,
     "DIDGeneratedAssetOptions": DIDGeneratedAssetOptions,
     "DIDTextToAvatarOptions": DIDTextToAvatarOptions,
-    "Destinations": Destinations,
     "DolbyEnhancement": DolbyEnhancement,
     "DolbyEnhancementOptions": DolbyEnhancementOptions,
     "Edit": Edit,
@@ -351,7 +340,6 @@ let typeMap: {[index: string]: any} = {
     "Enhancements": Enhancements,
     "FlipTransformation": FlipTransformation,
     "Font": Font,
-    "GeneratedAsset": GeneratedAsset,
     "GeneratedAssetErrorResponse": GeneratedAssetErrorResponse,
     "GeneratedAssetErrorResponseData": GeneratedAssetErrorResponseData,
     "GeneratedAssetResponse": GeneratedAssetResponse,
