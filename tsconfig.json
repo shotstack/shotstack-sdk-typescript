@@ -1,28 +1,29 @@
 {
-    "compilerOptions": {
-        "rootDir": "./src",
-        "module": "commonjs",
-        "noImplicitAny": false,
-        "target": "ES6",
-        "allowSyntheticDefaultImports": true,
-        "esModuleInterop": true,
-        "strict": true,
-        "moduleResolution": "node",
-        "removeComments": true,
-        "sourceMap": true,
-        "noLib": false,
-        "declaration": true,
-        "lib": ["dom", "es6", "es5", "dom.iterable", "scripthost"],
-        "outDir": "dist",
-        "typeRoots": [
-            "node_modules/@types"
-        ]
-    },
-    "include": [
-        "src/**/*.ts"
-    ],
-    "exclude": [
-        "dist",
-        "node_modules"
+  "compilerOptions": {
+    "rootDir": "./src",
+    "module": "commonjs",
+    "strict": true,
+    "target": "es6",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "declaration": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "noLib": false,
+    "typeRoots": [
+        "node_modules/@types"
     ]
+  },
+  "include": [
+      "src/**/*.ts"
+  ],
+  "exclude": [
+    "dist",
+    "node_modules"
+  ]
 }

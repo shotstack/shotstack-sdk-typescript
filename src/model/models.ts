@@ -6,16 +6,20 @@ export * from './assetResponse';
 export * from './assetResponseAttributes';
 export * from './assetResponseData';
 export * from './audioAsset';
+export * from './audioEnhancement';
 export * from './clip';
 export * from './crop';
 export * from './dIDGeneratedAsset';
 export * from './dIDGeneratedAssetOptions';
 export * from './dIDTextToAvatarOptions';
 export * from './destinations';
+export * from './dolbyEnhancement';
+export * from './dolbyEnhancementOptions';
 export * from './edit';
 export * from './elevenLabsGeneratedAsset';
 export * from './elevenLabsGeneratedAssetOptions';
 export * from './elevenLabsTextToSpeechOptions';
+export * from './enhancements';
 export * from './flipTransformation';
 export * from './font';
 export * from './generatedAsset';
@@ -24,6 +28,10 @@ export * from './generatedAssetErrorResponseData';
 export * from './generatedAssetResponse';
 export * from './generatedAssetResponseAttributes';
 export * from './generatedAssetResponseData';
+export * from './googleCloudStorageDestination';
+export * from './googleCloudStorageDestinationOptions';
+export * from './googleDriveDestination';
+export * from './googleDriveDestinationOptions';
 export * from './heyGenGeneratedAsset';
 export * from './heyGenGeneratedAssetOptions';
 export * from './heyGenTextToAvatarOptions';
@@ -36,6 +44,9 @@ export * from './mergeField';
 export * from './muxDestination';
 export * from './muxDestinationOptions';
 export * from './offset';
+export * from './openAiGeneratedAsset';
+export * from './openAiGeneratedAssetOptions';
+export * from './openAiTextGeneratorOptions';
 export * from './output';
 export * from './outputs';
 export * from './outputsResponse';
@@ -56,6 +67,8 @@ export * from './s3DestinationOptions';
 export * from './shotstackDestination';
 export * from './shotstackGeneratedAsset';
 export * from './shotstackGeneratedAssetOptions';
+export * from './shotstackImageToVideoOptions';
+export * from './shotstackTextGeneratorOptions';
 export * from './shotstackTextToImageOptions';
 export * from './shotstackTextToSpeechOptions';
 export * from './size';
@@ -66,6 +79,10 @@ export * from './sourceListResponse';
 export * from './sourceResponse';
 export * from './sourceResponseAttributes';
 export * from './sourceResponseData';
+export * from './speed';
+export * from './stabilityAiGeneratedAsset';
+export * from './stabilityAiGeneratedAssetOptions';
+export * from './stabilityAiTextToImageOptions';
 export * from './template';
 export * from './templateDataResponse';
 export * from './templateDataResponseData';
@@ -104,19 +121,26 @@ export interface RequestDetailedFile {
 export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 
 
+import { Asset } from './asset';
 import { AssetRenderResponse } from './assetRenderResponse';
 import { AssetResponse } from './assetResponse';
 import { AssetResponseAttributes } from './assetResponseAttributes';
 import { AssetResponseData } from './assetResponseData';
 import { AudioAsset } from './audioAsset';
+import { AudioEnhancement } from './audioEnhancement';
 import { Clip } from './clip';
 import { Crop } from './crop';
 import { DIDGeneratedAsset } from './dIDGeneratedAsset';
+import { DIDGeneratedAssetOptions } from './dIDGeneratedAssetOptions';
 import { DIDTextToAvatarOptions } from './dIDTextToAvatarOptions';
 import { Destinations } from './destinations';
+import { DolbyEnhancement } from './dolbyEnhancement';
+import { DolbyEnhancementOptions } from './dolbyEnhancementOptions';
 import { Edit } from './edit';
 import { ElevenLabsGeneratedAsset } from './elevenLabsGeneratedAsset';
+import { ElevenLabsGeneratedAssetOptions } from './elevenLabsGeneratedAssetOptions';
 import { ElevenLabsTextToSpeechOptions } from './elevenLabsTextToSpeechOptions';
+import { Enhancements } from './enhancements';
 import { FlipTransformation } from './flipTransformation';
 import { Font } from './font';
 import { GeneratedAsset } from './generatedAsset';
@@ -125,7 +149,12 @@ import { GeneratedAssetErrorResponseData } from './generatedAssetErrorResponseDa
 import { GeneratedAssetResponse } from './generatedAssetResponse';
 import { GeneratedAssetResponseAttributes } from './generatedAssetResponseAttributes';
 import { GeneratedAssetResponseData } from './generatedAssetResponseData';
+import { GoogleCloudStorageDestination } from './googleCloudStorageDestination';
+import { GoogleCloudStorageDestinationOptions } from './googleCloudStorageDestinationOptions';
+import { GoogleDriveDestination } from './googleDriveDestination';
+import { GoogleDriveDestinationOptions } from './googleDriveDestinationOptions';
 import { HeyGenGeneratedAsset } from './heyGenGeneratedAsset';
+import { HeyGenGeneratedAssetOptions } from './heyGenGeneratedAssetOptions';
 import { HeyGenTextToAvatarOptions } from './heyGenTextToAvatarOptions';
 import { HtmlAsset } from './htmlAsset';
 import { ImageAsset } from './imageAsset';
@@ -136,6 +165,9 @@ import { MergeField } from './mergeField';
 import { MuxDestination } from './muxDestination';
 import { MuxDestinationOptions } from './muxDestinationOptions';
 import { Offset } from './offset';
+import { OpenAiGeneratedAsset } from './openAiGeneratedAsset';
+import { OpenAiGeneratedAssetOptions } from './openAiGeneratedAssetOptions';
+import { OpenAiTextGeneratorOptions } from './openAiTextGeneratorOptions';
 import { Output } from './output';
 import { Outputs } from './outputs';
 import { OutputsResponse } from './outputsResponse';
@@ -155,6 +187,9 @@ import { S3Destination } from './s3Destination';
 import { S3DestinationOptions } from './s3DestinationOptions';
 import { ShotstackDestination } from './shotstackDestination';
 import { ShotstackGeneratedAsset } from './shotstackGeneratedAsset';
+import { ShotstackGeneratedAssetOptions } from './shotstackGeneratedAssetOptions';
+import { ShotstackImageToVideoOptions } from './shotstackImageToVideoOptions';
+import { ShotstackTextGeneratorOptions } from './shotstackTextGeneratorOptions';
 import { ShotstackTextToImageOptions } from './shotstackTextToImageOptions';
 import { ShotstackTextToSpeechOptions } from './shotstackTextToSpeechOptions';
 import { Size } from './size';
@@ -165,6 +200,10 @@ import { SourceListResponse } from './sourceListResponse';
 import { SourceResponse } from './sourceResponse';
 import { SourceResponseAttributes } from './sourceResponseAttributes';
 import { SourceResponseData } from './sourceResponseData';
+import { Speed } from './speed';
+import { StabilityAiGeneratedAsset } from './stabilityAiGeneratedAsset';
+import { StabilityAiGeneratedAssetOptions } from './stabilityAiGeneratedAssetOptions';
+import { StabilityAiTextToImageOptions } from './stabilityAiTextToImageOptions';
 import { Template } from './template';
 import { TemplateDataResponse } from './templateDataResponse';
 import { TemplateDataResponseData } from './templateDataResponseData';
@@ -203,6 +242,11 @@ let primitives = [
                  ];
 
 let enumsMap: {[index: string]: any} = {
+        "Asset.VolumeEffectEnum": Asset.VolumeEffectEnum,
+        "Asset.StyleEnum": Asset.StyleEnum,
+        "Asset.SizeEnum": Asset.SizeEnum,
+        "Asset.PositionEnum": Asset.PositionEnum,
+        "Asset.EffectEnum": Asset.EffectEnum,
         "AssetResponseAttributes.StatusEnum": AssetResponseAttributes.StatusEnum,
         "AudioAsset.EffectEnum": AudioAsset.EffectEnum,
         "Clip.FitEnum": Clip.FitEnum,
@@ -210,16 +254,27 @@ let enumsMap: {[index: string]: any} = {
         "Clip.EffectEnum": Clip.EffectEnum,
         "Clip.FilterEnum": Clip.FilterEnum,
         "DIDGeneratedAsset.ProviderEnum": DIDGeneratedAsset.ProviderEnum,
+        "DIDGeneratedAssetOptions.TypeEnum": DIDGeneratedAssetOptions.TypeEnum,
+        "DIDGeneratedAssetOptions.AvatarEnum": DIDGeneratedAssetOptions.AvatarEnum,
         "DIDTextToAvatarOptions.TypeEnum": DIDTextToAvatarOptions.TypeEnum,
         "DIDTextToAvatarOptions.AvatarEnum": DIDTextToAvatarOptions.AvatarEnum,
+        "DolbyEnhancementOptions.PresetEnum": DolbyEnhancementOptions.PresetEnum,
         "Edit.DiskEnum": Edit.DiskEnum,
         "ElevenLabsGeneratedAsset.ProviderEnum": ElevenLabsGeneratedAsset.ProviderEnum,
+        "ElevenLabsGeneratedAssetOptions.TypeEnum": ElevenLabsGeneratedAssetOptions.TypeEnum,
+        "ElevenLabsGeneratedAssetOptions.VoiceEnum": ElevenLabsGeneratedAssetOptions.VoiceEnum,
         "ElevenLabsTextToSpeechOptions.TypeEnum": ElevenLabsTextToSpeechOptions.TypeEnum,
         "ElevenLabsTextToSpeechOptions.VoiceEnum": ElevenLabsTextToSpeechOptions.VoiceEnum,
+        "GeneratedAsset.ProviderEnum": GeneratedAsset.ProviderEnum,
         "GeneratedAssetResponseAttributes.ProviderEnum": GeneratedAssetResponseAttributes.ProviderEnum,
         "GeneratedAssetResponseAttributes.TypeEnum": GeneratedAssetResponseAttributes.TypeEnum,
         "GeneratedAssetResponseAttributes.StatusEnum": GeneratedAssetResponseAttributes.StatusEnum,
         "HeyGenGeneratedAsset.ProviderEnum": HeyGenGeneratedAsset.ProviderEnum,
+        "HeyGenGeneratedAssetOptions.TypeEnum": HeyGenGeneratedAssetOptions.TypeEnum,
+        "HeyGenGeneratedAssetOptions.AvatarEnum": HeyGenGeneratedAssetOptions.AvatarEnum,
+        "HeyGenGeneratedAssetOptions.VoiceEnum": HeyGenGeneratedAssetOptions.VoiceEnum,
+        "HeyGenGeneratedAssetOptions.AvatarStyleEnum": HeyGenGeneratedAssetOptions.AvatarStyleEnum,
+        "HeyGenGeneratedAssetOptions.RatioEnum": HeyGenGeneratedAssetOptions.RatioEnum,
         "HeyGenTextToAvatarOptions.TypeEnum": HeyGenTextToAvatarOptions.TypeEnum,
         "HeyGenTextToAvatarOptions.AvatarEnum": HeyGenTextToAvatarOptions.AvatarEnum,
         "HeyGenTextToAvatarOptions.VoiceEnum": HeyGenTextToAvatarOptions.VoiceEnum,
@@ -227,6 +282,11 @@ let enumsMap: {[index: string]: any} = {
         "HeyGenTextToAvatarOptions.RatioEnum": HeyGenTextToAvatarOptions.RatioEnum,
         "HtmlAsset.PositionEnum": HtmlAsset.PositionEnum,
         "MuxDestinationOptions.PlaybackPolicyEnum": MuxDestinationOptions.PlaybackPolicyEnum,
+        "OpenAiGeneratedAsset.ProviderEnum": OpenAiGeneratedAsset.ProviderEnum,
+        "OpenAiGeneratedAssetOptions.TypeEnum": OpenAiGeneratedAssetOptions.TypeEnum,
+        "OpenAiGeneratedAssetOptions.ModelEnum": OpenAiGeneratedAssetOptions.ModelEnum,
+        "OpenAiTextGeneratorOptions.TypeEnum": OpenAiTextGeneratorOptions.TypeEnum,
+        "OpenAiTextGeneratorOptions.ModelEnum": OpenAiTextGeneratorOptions.ModelEnum,
         "Output.FormatEnum": Output.FormatEnum,
         "Output.ResolutionEnum": Output.ResolutionEnum,
         "Output.AspectRatioEnum": Output.AspectRatioEnum,
@@ -240,12 +300,24 @@ let enumsMap: {[index: string]: any} = {
         "Rendition.FpsEnum": Rendition.FpsEnum,
         "RenditionResponseAttributes.StatusEnum": RenditionResponseAttributes.StatusEnum,
         "ShotstackGeneratedAsset.ProviderEnum": ShotstackGeneratedAsset.ProviderEnum,
+        "ShotstackGeneratedAssetOptions.TypeEnum": ShotstackGeneratedAssetOptions.TypeEnum,
+        "ShotstackGeneratedAssetOptions.VoiceEnum": ShotstackGeneratedAssetOptions.VoiceEnum,
+        "ShotstackGeneratedAssetOptions.LanguageEnum": ShotstackGeneratedAssetOptions.LanguageEnum,
+        "ShotstackImageToVideoOptions.TypeEnum": ShotstackImageToVideoOptions.TypeEnum,
+        "ShotstackTextGeneratorOptions.TypeEnum": ShotstackTextGeneratorOptions.TypeEnum,
         "ShotstackTextToImageOptions.TypeEnum": ShotstackTextToImageOptions.TypeEnum,
         "ShotstackTextToSpeechOptions.TypeEnum": ShotstackTextToSpeechOptions.TypeEnum,
         "ShotstackTextToSpeechOptions.VoiceEnum": ShotstackTextToSpeechOptions.VoiceEnum,
         "ShotstackTextToSpeechOptions.LanguageEnum": ShotstackTextToSpeechOptions.LanguageEnum,
         "Soundtrack.EffectEnum": Soundtrack.EffectEnum,
         "SourceResponseAttributes.StatusEnum": SourceResponseAttributes.StatusEnum,
+        "StabilityAiGeneratedAsset.ProviderEnum": StabilityAiGeneratedAsset.ProviderEnum,
+        "StabilityAiGeneratedAssetOptions.TypeEnum": StabilityAiGeneratedAssetOptions.TypeEnum,
+        "StabilityAiGeneratedAssetOptions.EngineEnum": StabilityAiGeneratedAssetOptions.EngineEnum,
+        "StabilityAiGeneratedAssetOptions.StylePresetEnum": StabilityAiGeneratedAssetOptions.StylePresetEnum,
+        "StabilityAiTextToImageOptions.TypeEnum": StabilityAiTextToImageOptions.TypeEnum,
+        "StabilityAiTextToImageOptions.EngineEnum": StabilityAiTextToImageOptions.EngineEnum,
+        "StabilityAiTextToImageOptions.StylePresetEnum": StabilityAiTextToImageOptions.StylePresetEnum,
         "TitleAsset.StyleEnum": TitleAsset.StyleEnum,
         "TitleAsset.SizeEnum": TitleAsset.SizeEnum,
         "TitleAsset.PositionEnum": TitleAsset.PositionEnum,
@@ -257,26 +329,40 @@ let enumsMap: {[index: string]: any} = {
 }
 
 let typeMap: {[index: string]: any} = {
+    "Asset": Asset,
     "AssetRenderResponse": AssetRenderResponse,
     "AssetResponse": AssetResponse,
     "AssetResponseAttributes": AssetResponseAttributes,
     "AssetResponseData": AssetResponseData,
     "AudioAsset": AudioAsset,
+    "AudioEnhancement": AudioEnhancement,
     "Clip": Clip,
     "Crop": Crop,
     "DIDGeneratedAsset": DIDGeneratedAsset,
+    "DIDGeneratedAssetOptions": DIDGeneratedAssetOptions,
     "DIDTextToAvatarOptions": DIDTextToAvatarOptions,
+    "Destinations": Destinations,
+    "DolbyEnhancement": DolbyEnhancement,
+    "DolbyEnhancementOptions": DolbyEnhancementOptions,
     "Edit": Edit,
     "ElevenLabsGeneratedAsset": ElevenLabsGeneratedAsset,
+    "ElevenLabsGeneratedAssetOptions": ElevenLabsGeneratedAssetOptions,
     "ElevenLabsTextToSpeechOptions": ElevenLabsTextToSpeechOptions,
+    "Enhancements": Enhancements,
     "FlipTransformation": FlipTransformation,
     "Font": Font,
+    "GeneratedAsset": GeneratedAsset,
     "GeneratedAssetErrorResponse": GeneratedAssetErrorResponse,
     "GeneratedAssetErrorResponseData": GeneratedAssetErrorResponseData,
     "GeneratedAssetResponse": GeneratedAssetResponse,
     "GeneratedAssetResponseAttributes": GeneratedAssetResponseAttributes,
     "GeneratedAssetResponseData": GeneratedAssetResponseData,
+    "GoogleCloudStorageDestination": GoogleCloudStorageDestination,
+    "GoogleCloudStorageDestinationOptions": GoogleCloudStorageDestinationOptions,
+    "GoogleDriveDestination": GoogleDriveDestination,
+    "GoogleDriveDestinationOptions": GoogleDriveDestinationOptions,
     "HeyGenGeneratedAsset": HeyGenGeneratedAsset,
+    "HeyGenGeneratedAssetOptions": HeyGenGeneratedAssetOptions,
     "HeyGenTextToAvatarOptions": HeyGenTextToAvatarOptions,
     "HtmlAsset": HtmlAsset,
     "ImageAsset": ImageAsset,
@@ -287,6 +373,9 @@ let typeMap: {[index: string]: any} = {
     "MuxDestination": MuxDestination,
     "MuxDestinationOptions": MuxDestinationOptions,
     "Offset": Offset,
+    "OpenAiGeneratedAsset": OpenAiGeneratedAsset,
+    "OpenAiGeneratedAssetOptions": OpenAiGeneratedAssetOptions,
+    "OpenAiTextGeneratorOptions": OpenAiTextGeneratorOptions,
     "Output": Output,
     "Outputs": Outputs,
     "OutputsResponse": OutputsResponse,
@@ -306,6 +395,9 @@ let typeMap: {[index: string]: any} = {
     "S3DestinationOptions": S3DestinationOptions,
     "ShotstackDestination": ShotstackDestination,
     "ShotstackGeneratedAsset": ShotstackGeneratedAsset,
+    "ShotstackGeneratedAssetOptions": ShotstackGeneratedAssetOptions,
+    "ShotstackImageToVideoOptions": ShotstackImageToVideoOptions,
+    "ShotstackTextGeneratorOptions": ShotstackTextGeneratorOptions,
     "ShotstackTextToImageOptions": ShotstackTextToImageOptions,
     "ShotstackTextToSpeechOptions": ShotstackTextToSpeechOptions,
     "Size": Size,
@@ -316,6 +408,10 @@ let typeMap: {[index: string]: any} = {
     "SourceResponse": SourceResponse,
     "SourceResponseAttributes": SourceResponseAttributes,
     "SourceResponseData": SourceResponseData,
+    "Speed": Speed,
+    "StabilityAiGeneratedAsset": StabilityAiGeneratedAsset,
+    "StabilityAiGeneratedAssetOptions": StabilityAiGeneratedAssetOptions,
+    "StabilityAiTextToImageOptions": StabilityAiTextToImageOptions,
     "Template": Template,
     "TemplateDataResponse": TemplateDataResponse,
     "TemplateDataResponseData": TemplateDataResponseData,
