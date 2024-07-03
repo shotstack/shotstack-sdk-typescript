@@ -1,6 +1,6 @@
 /**
  * Shotstack
- * Official PHP SDK for the Shotstack Cloud Video Editing API
+ * Official Typescript SDK for the Shotstack Cloud Video Editing API
  *
  * OpenAPI spec version: v1
  * 
