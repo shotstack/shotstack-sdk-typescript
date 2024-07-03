@@ -1,29 +1,44 @@
 {
-    "name": "shotstack-sdk-typescript",
-    "version": "0.2.6.beta",
-    "description": "NodeJS client for shotstack-sdk-typescript",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/GIT_USER_ID/GIT_REPO_ID.git"
-    },
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
-    "scripts": {
-        "clean": "rm -Rf dist/",
-        "build": "tsc",
-        "test": "npm run clean && npm run build"
-    },
-    "author": "OpenAPI-Generator Contributors",
-    "license": "Unlicense",
-    "dependencies": {
-        "bluebird": "^3.5.0",
-        "request": "^2.81.0",
-        "rewire": "^3.0.2"
-    },
-    "devDependencies": {
-        "@types/bluebird": "^3.5.33",
-        "@types/node": "^12",
-        "@types/request": "^2.48.8",
-        "typescript": "^4.0"
+  "name": "shotstack-sdk-typescript",
+  "version": "0.2.6.beta",
+  "description": "Official Typescript SDK for the Shotstack Cloud Video Editing API",
+  "author": "Shotstack",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shotstack/shotstack-sdk-typescript"
+  },
+  "keywords": [
+    "video",
+    "ffmpeg",
+    "video-editing",
+    "video-editing-api",
+    "video-editor",
+    "video-api",
+    "cloud-video",
+    "video-processing"
+  ],
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "type": "module",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.js"
     }
+  },
+  "typings": "./dist/index.d.ts",
+  "scripts": {
+    "clean": "rm -Rf dist/",
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "es6-promise": "^4.2.4",
+    "url-parse": "^1.4.3"
+  },
+  "devDependencies": {
+    "typescript": "^4.0",
+    "@types/url-parse": "1.4.4"
+  }
 }
