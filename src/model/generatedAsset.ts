@@ -10,46 +10,14 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 import { DIDGeneratedAsset } from './dIDGeneratedAsset';
 import { ElevenLabsGeneratedAsset } from './elevenLabsGeneratedAsset';
 import { HeyGenGeneratedAsset } from './heyGenGeneratedAsset';
 import { OpenAiGeneratedAsset } from './openAiGeneratedAsset';
 import { ShotstackGeneratedAsset } from './shotstackGeneratedAsset';
 import { StabilityAiGeneratedAsset } from './stabilityAiGeneratedAsset';
-import { StabilityAiGeneratedAssetOptions } from './stabilityAiGeneratedAssetOptions';
 
 /**
 * A generated asset is a media asset created by the Create API. You can use native or third party providers to generate video, audio and image files using Generative AI services like text-to-speech and text-to-avatar. The following providers are currently available: <ul>   <li><a href=\"#tocs_shotstackgeneratedasset\">ShotstackGeneratedAsset</a></li>   <li><a href=\"#tocs_didgeneratedasset\">DIDGeneratedAsset</a></li>   <li><a href=\"#tocs_elevenlabsgeneratedasset\">ElevenLabsGeneratedAsset</a></li>   <li><a href=\"#tocs_heygengeneratedasset\">HeyGenGeneratedAsset</a></li>   <li><a href=\"#tocs_openaigeneratedasset\">OpenAiGeneratedAsset</a></li>   <li><a href=\"#tocs_stabilityaigeneratedasset\">StabilityAiGeneratedAsset</a></li> </ul>
 */
-export class GeneratedAsset {
-    /**
-    * The name of the provider - set to `stability-ai` for Stability AI.
-    */
-    'provider': GeneratedAsset.ProviderEnum = GeneratedAsset.ProviderEnum.STABILITY_AI;
-    'options': StabilityAiGeneratedAssetOptions;
-
-    static discriminator: string | undefined = "provider";
-
-    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-        {
-            "name": "provider",
-            "baseName": "provider",
-            "type": "GeneratedAsset.ProviderEnum"
-        },
-        {
-            "name": "options",
-            "baseName": "options",
-            "type": "StabilityAiGeneratedAssetOptions"
-        }    ];
-
-    static getAttributeTypeMap() {
-        return GeneratedAsset.attributeTypeMap;
-    }
-}
-
-export namespace GeneratedAsset {
-    export enum ProviderEnum {
-        STABILITY_AI = <any> 'stability-ai'
-    }
-}
+export type GeneratedAsset = DIDGeneratedAsset | ElevenLabsGeneratedAsset | HeyGenGeneratedAsset | ShotstackGeneratedAsset | StabilityAiGeneratedAsset | OpenAiGeneratedAsset;
