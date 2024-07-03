@@ -1,6 +1,6 @@
 {
   "name": "shotstack-sdk-typescript",
-  "version": "0.2.6.beta",
+  "version": "0.2.6",
   "description": "Official Typescript SDK for the Shotstack Cloud Video Editing API",
   "author": "Shotstack",
   "repository": {
