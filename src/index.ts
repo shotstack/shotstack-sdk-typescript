@@ -1,3 +1,2 @@
-// This is the entrypoint for the package
-export * from './api/apis';
-export * from './model/models';
+export * from './generated/types.gen';
+export * from './generated/sdk.gen';
