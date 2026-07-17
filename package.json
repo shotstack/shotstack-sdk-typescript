@@ -1,6 +1,6 @@
 {
   "name": "shotstack-sdk-typescript",
-  "version": "0.2.6",
+  "version": "1.14.1",
   "description": "Official Typescript SDK for the Shotstack Cloud Video Editing API",
   "author": "Shotstack",
   "repository": {
@@ -33,12 +33,8 @@
     "build": "tsc",
     "prepare": "npm run build"
   },
-  "dependencies": {
-    "es6-promise": "^4.2.4",
-    "url-parse": "^1.4.3"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "typescript": "^4.0",
-    "@types/url-parse": "1.4.4"
+    "typescript": "^5.7.0"
   }
 }
