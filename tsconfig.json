@@ -1,29 +1,14 @@
 {
   "compilerOptions": {
-    "rootDir": "./src",
-    "module": "commonjs",
-    "strict": true,
-    "target": "es6",
-    "esModuleInterop": true,
-    "moduleResolution": "node",
+    "target": "ES2022",
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "declaration": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "removeComments": true,
-    "sourceMap": true,
     "outDir": "./dist",
-    "noLib": false,
-    "typeRoots": [
-        "node_modules/@types"
-    ]
+    "rootDir": "./src",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true
   },
-  "include": [
-      "src/**/*.ts"
-  ],
-  "exclude": [
-    "dist",
-    "node_modules"
-  ]
+  "include": ["src/**/*"]
 }
